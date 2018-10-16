@@ -7,8 +7,7 @@ editor_options:
 
 ```{r}
 suppressPackageStartupMessages(library(tidyverse))
-library(ggplot2)
-library(gapminder)
+suppressPackageStartupMessages(library(gapminder))
 ```
 
 
@@ -99,7 +98,7 @@ p_scales +
     scale_colour_viridis_c(
         trans   = "log10",
         breaks  = 10^(1:10),
-        labels  = comma_format(),
+        labels  = comma_format()
     ) +
     scale_y_continuous(breaks=10*(1:10))
 ```
@@ -170,18 +169,18 @@ ggplotly(p)
     - NOTE: plotly graphs don't seem to show up in Rmd _notebooks_, but they do with Rmd _documents_.
 
 ```{r}
-p %>% 
-    ggplotly() %>% 
-    htmlwidgets::saveWidget("LOCATION_GOES_HERE")
+#p %>% 
+ #   ggplotly() %>% 
+  #  htmlwidgets::saveWidget("LOCATION_GOES_HERE")
 ```
 
 
 3. Run this code to see the json format underneath:
 
 ```{r}
-p %>% 
-    ggplotly() %>% 
-    plotly_json()
+#p %>% 
+ #   ggplotly() %>% 
+  #  plotly_json()
 ```
 
 
@@ -204,7 +203,7 @@ plot_ly(gapminder,
 plot_ly(gapminder, 
         x = ~gdpPercap, 
         y = ~lifeExp, 
-        z = FILL_THIS_IN,
+        z = ~pop,
         type = "scatter3d",
         mode = "markers",
         opacity = 0.2)
