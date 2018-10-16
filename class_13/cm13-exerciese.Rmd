@@ -2,7 +2,7 @@
 title: "cm013 Exercise"
 output: 
   html_document:
-    keep_md: FALSE
+    keep_md: true
 ---
 
 ```{r}
