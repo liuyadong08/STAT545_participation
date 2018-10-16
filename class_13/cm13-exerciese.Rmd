@@ -1,8 +1,8 @@
 ---
 title: "cm013 Exercise"
-output: html_notebook
-editor_options: 
-  chunk_output_type: inline
+output: 
+  html_document:
+    keep_md: FALSE
 ---
 
 ```{r}
