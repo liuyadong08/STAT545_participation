@@ -237,10 +237,9 @@ icecream %>%
 
 ```{r}
 str(got_alias)
-got_alias
-#got_alias %>% 
-#  drop_na() %>%
-#  unnest()
+got_alias %>% 
+  drop_na() %>%
+  unnest()
 ```
 
 We can also do the opposite with `tidyr::nest()`. Try it with the `iris` data frame:
